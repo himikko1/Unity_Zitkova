@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,8 +10,8 @@ public class AgeAppear : MonoBehaviour {
 
 	public void saveTextOfAge(){
 		int age;
-		if (int.TryParse(inputField2.text2, out age)) { // Здесь мы проверяем, что пользователь ввел число
-			ageAppear.text2 = age + " years old!"; // Здесь мы выводим возраст на экран
+		if (int.TryParse(inputField2.text, out age)) { // Здесь мы проверяем, что пользователь ввел число
+			ageAppear.text = age + " years old!"; // Здесь мы выводим возраст на экран
 		} else {
 			Debug.Log("Ошибка ввода. Введите число."); // Здесь мы выводим сообщение об ошибке в консоль Unity
 		}
@@ -20,4 +20,4 @@ public class AgeAppear : MonoBehaviour {
 	private void Start() {
 		inputField2.contentType = InputField.ContentType.IntegerNumber; // Здесь мы устанавливаем тип контента поля ввода на "целое число"
 	}
-}
+}*/
