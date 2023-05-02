@@ -5,10 +5,19 @@ using UnityEngine.UI;
 
 public class ImageAppear : MonoBehaviour {
 	public GameObject pikachu;
-	public GameObject variableImage;
 	public GameObject charmander;
+	public GameObject variableImage;
 	public Sprite[] imageArray;
 	public GameObject partyHat;
+	public GameObject scarf;
+	public GameObject slider;
+	public void changeSize(){
+		float trueValue = slider.GetComponent<Slider> ().value;
+		variableImage.transform.localScale = new Vector3 (1F * trueValue, 1F * trueValue, 1);
+	}
+	public void scarfAppear(bool value){
+		scarf.SetActive (value);
+	}
 	public void partyHatAppear(bool value){
 		partyHat.SetActive (value);
 	}
@@ -23,24 +32,17 @@ public class ImageAppear : MonoBehaviour {
 
 	}
 	void Start(){
+		scarf.SetActive (false);
+		partyHat.SetActive (false);
 		charmander.SetActive (false);
 	}
-	/*public void dropDown(int num){
-		if (num == 0) {
-			//Debug.Log("Pikachu");
-			variableImage.GetComponent<Image>().sprite = imageArray [0];
-		}
-		if (num == 1) {
-			//Debug.Log("Charmander");
-			variableImage.GetComponent<Image>().sprite = imageArray [1];
-		}
-	}
+		
 
 	public void pikachuAppear(bool value){
 		pikachu.SetActive (value);
 	}
 	public void charmanderAppear(bool value){
 		charmander.SetActive (value);
-	}*/
+	}
 
 }
